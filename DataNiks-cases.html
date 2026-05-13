@@ -1,90 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Case Studies - DataNiks LLC</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case Studies - DataNiks LLC</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.case-hero{padding:130px 20px 90px;background:radial-gradient(1200px 500px at 50% 0%, rgba(109,94,252,.14), transparent 60%)}
+.case-hero h1{max-width:980px;margin:0 auto 18px;text-align:center;font-size:clamp(2.4rem,5vw,4.8rem);line-height:1.03;letter-spacing:-.04em}
+.case-hero p{max-width:760px;margin:0 auto;text-align:center;font-size:1.12rem;line-height:1.8;color:var(--text-secondary)}
+.case-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.case-card{position:relative;overflow:hidden;padding:30px;border-radius:24px;background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--border);box-shadow:var(--shadow);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.case-card::before{content:'';position:absolute;inset:auto -40px -60px auto;width:170px;height:170px;background:radial-gradient(circle, rgba(109,94,252,.18), transparent 70%);pointer-events:none}
+.case-card:hover{transform:translateY(-8px);border-color:rgba(255,255,255,.16);box-shadow:0 30px 75px rgba(0,0,0,.38)}
+.case-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(109,94,252,.12);color:var(--accent);margin-bottom:18px}
+.case-card h3{margin:0 0 16px;font-size:1.28rem;line-height:1.25;color:var(--text-primary)}
+.case-card p{margin:0 0 12px;color:var(--text-secondary);line-height:1.72;font-size:1rem}
+.case-card p strong{color:var(--text-primary)}
+.note-panel{max-width:920px;margin:0 auto;padding:30px;border-radius:28px;background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--border);box-shadow:var(--shadow)}
+.note-panel p{margin:0;text-align:center;color:var(--text-secondary);line-height:1.8}
+.cta-wrap{max-width:920px;margin:0 auto;text-align:center;padding:30px;border-radius:28px;background:linear-gradient(135deg, rgba(109,94,252,.16), rgba(79,209,197,.12));border:1px solid var(--border)}
+.cta-wrap p{margin:0 0 22px;color:var(--text-secondary);line-height:1.7}
+.case-section{padding:92px 20px}
+@media (max-width:1000px){.case-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:680px){.case-grid{grid-template-columns:1fr}.case-hero{padding-top:110px}}
+</style>
 </head>
 <body class="dark">
-
 <nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="DataNiks-services.html">Services</a></li>
-        <li><a href="DataNiks-process.html">Process</a></li>
-        <li><a href="DataNiks-cases.html">Case Studies</a></li>
-        <li><a href="DataNiks-contact.html">Contact</a></li>
-    </ul>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="DataNiks-services.html">Services</a></li>
+    <li><a href="DataNiks-process.html">Process</a></li>
+    <li><a href="DataNiks-cases.html">Case Studies</a></li>
+    <li><a href="DataNiks-contact.html">Contact</a></li>
+  </ul>
 </nav>
 
-<section class="hero">
-    <div>
-        <h1>Case Studies & Sample Projects</h1>
+<section class="case-hero">
+  <h1>Case Studies &amp; Sample Projects</h1>
+  <p>Examples of how we use data analytics to solve real business problems and deliver measurable results.</p>
+</section>
 
-        <p style="max-width:700px;margin:auto;color:var(--text-secondary);">
-            Examples of how we use data analytics to solve real business problems and deliver measurable results.
-        </p>
+<section class="case-section">
+  <div class="section-inner">
+    <div class="case-grid">
+      <article class="case-card">
+        <div class="case-badge">Dashboard</div>
+        <h3>Retail Sales Dashboard</h3>
+        <p><strong>Business Problem:</strong> Sales data was scattered across Excel files with no clear visibility into performance.</p>
+        <p><strong>Solution:</strong> Cleaned and merged data, then built a Power BI dashboard to track sales, products, and trends.</p>
+        <p><strong>Result:</strong> Enabled faster decision-making and improved sales tracking.</p>
+        <p><strong>Tools:</strong> Excel, Power BI</p>
+      </article>
+
+      <article class="case-card">
+        <div class="case-badge">Forecasting</div>
+        <h3>Inventory Analysis</h3>
+        <p><strong>Business Problem:</strong> Overstocking and stockouts due to lack of proper tracking.</p>
+        <p><strong>Solution:</strong> Analyzed historical data and created reports to identify demand patterns.</p>
+        <p><strong>Result:</strong> Improved inventory planning and reduced unnecessary stock.</p>
+        <p><strong>Tools:</strong> Python, Excel</p>
+      </article>
+
+      <article class="case-card">
+        <div class="case-badge">Automation</div>
+        <h3>Automated Reporting System</h3>
+        <p><strong>Business Problem:</strong> Manual reporting taking hours every week.</p>
+        <p><strong>Solution:</strong> Built Python scripts to automate data processing and report generation.</p>
+        <p><strong>Result:</strong> Saved time and reduced manual errors.</p>
+        <p><strong>Tools:</strong> Python, SQL</p>
+      </article>
     </div>
+  </div>
 </section>
-<section class="section">
-    <div class="services-grid">
 
-        <div class="glass-card case-card">
-            <h3>Retail Sales Dashboard</h3>
-
-            <p><strong>Business Problem:</strong> Sales data was scattered across Excel files with no clear visibility into performance.</p>
-
-            <p><strong>Solution:</strong> Cleaned and merged data, then built a Power BI dashboard to track sales, products, and trends.</p>
-
-            <p><strong>Result:</strong> Enabled faster decision-making and improved sales tracking.</p>
-
-            <p><strong>Tools:</strong> Excel, Power BI</p>
-        </div>
-
-        <div class="glass-card case-card">
-            <h3>Inventory Analysis</h3>
-
-            <p><strong>Business Problem:</strong> Overstocking and stockouts due to lack of proper tracking.</p>
-
-            <p><strong>Solution:</strong> Analyzed historical data and created reports to identify demand patterns.</p>
-
-            <p><strong>Result:</strong> Improved inventory planning and reduced unnecessary stock.</p>
-
-            <p><strong>Tools:</strong> Python, Excel</p>
-        </div>
-
-        <div class="glass-card case-card">
-            <h3>Automated Reporting System</h3>
-
-            <p><strong>Business Problem:</strong> Manual reporting taking hours every week.</p>
-
-            <p><strong>Solution:</strong> Built Python scripts to automate data processing and report generation.</p>
-
-            <p><strong>Result:</strong> Saved time and reduced manual errors.</p>
-
-            <p><strong>Tools:</strong> Python, SQL</p>
-        </div>
-
-    </div>
+<section class="case-section">
+  <div class="note-panel">
+    <p>These are sample projects demonstrating the types of solutions we provide. Client projects and custom solutions are tailored based on your specific business needs.</p>
+  </div>
 </section>
-<section class="section">
-    <p style="max-width:800px;margin:auto;text-align:center;color:var(--text-secondary);">
-        These are sample projects demonstrating the types of solutions we provide. 
-        Client projects and custom solutions are tailored based on your specific business needs.
-    </p>
-</section>
-<section class="section" style="text-align:center;">
-    <h2>Want Similar Results for Your Business?</h2>
 
-    <p style="color:var(--text-secondary);margin-bottom:2rem;">
-        Let’s discuss your data challenges and build a solution that works for you.
-    </p>
-
-    <a href="DataNiks-contact.html" style="background:var(--accent);padding:1rem 3rem;border-radius:50px;color:white;font-weight:600;text-decoration:none;">
-        Get Free Consultation
-    </a>
+<section class="case-section">
+  <div class="cta-wrap">
+    <h2 style="margin:0 0 12px;">Want Similar Results for Your Business?</h2>
+    <p>Let’s discuss your data challenges and build a solution that works for you.</p>
+    <a class="btn btn-primary" href="DataNiks-contact.html">Get Free Consultation</a>
+  </div>
 </section>
+
 <script src="script.js"></script>
 </body>
 </html>
