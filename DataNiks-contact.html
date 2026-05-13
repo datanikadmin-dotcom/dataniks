@@ -1,109 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-
-    <title>Contact DataNiks LLC | Book a Free Data Consultation</title>
-
-    <meta name="description" content="Book a free consultation with DataNiks LLC. Get help with data analytics, Power BI dashboards, SQL, and automation.">
-
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact DataNiks LLC | Book a Free Data Consultation</title>
+<meta name="description" content="Book a free consultation with DataNiks LLC. Get help with data analytics, Power BI dashboards, SQL, and automation.">
+<link rel="stylesheet" href="styles.css">
+<style>
+.contact-hero{padding:130px 20px 90px;background:radial-gradient(1200px 500px at 50% 0%, rgba(109,94,252,.14), transparent 60%)}
+.contact-hero h1{max-width:980px;margin:0 auto 18px;text-align:center;font-size:clamp(2.4rem,5vw,4.8rem);line-height:1.03;letter-spacing:-.04em}
+.contact-hero p{max-width:760px;margin:0 auto;text-align:center;font-size:1.12rem;line-height:1.8;color:var(--text-secondary)}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:24px}
+.contact-card{padding:30px;border-radius:24px;background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--border);box-shadow:var(--shadow)}
+.contact-card h3{margin:0 0 18px;font-size:1.4rem;color:var(--text-primary)}
+.contact-card p{color:var(--text-secondary);line-height:1.75}
+.benefits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
+.benefit{padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--text-primary);font-weight:600}
+.calendly-wrap{padding:24px;border-radius:24px;background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--border);box-shadow:var(--shadow)}
+.calendly-inline-widget{min-width:320px;height:760px;margin-top:18px;border-radius:18px;overflow:hidden}
+.steps{display:grid;gap:14px;margin-top:10px}
+.step{padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--border)}
+.step strong{color:var(--text-primary)}
+.alt-contact{max-width:900px;margin:0 auto;padding:30px;border-radius:28px;background:linear-gradient(135deg, rgba(109,94,252,.16), rgba(79,209,197,.12));border:1px solid var(--border);text-align:center}
+.alt-contact p{margin:0;color:var(--text-secondary);line-height:1.7}
+.email-link{display:inline-flex;align-items:center;gap:10px;margin-top:14px;font-weight:800;color:var(--text-primary);text-decoration:none}
+.note{margin:12px 0 0;text-align:center;color:var(--text-secondary)}
+@media (min-width:900px){.contact-grid{grid-template-columns:360px minmax(0,1fr)}.benefits{grid-template-columns:1fr}.contact-card{position:sticky;top:96px}}
+@media (max-width:680px){.contact-hero{padding-top:110px}.calendly-inline-widget{height:680px}}
+</style>
 </head>
-
 <body class="dark">
-
-<!-- NAV -->
 <nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="DataNiks-services.html">Services</a></li>
-        <li><a href="DataNiks-process.html">Process</a></li>
-        <li><a href="DataNiks-cases.html">Case Studies</a></li>
-        <li><a href="DataNiks-contact.html" style="color:var(--accent);font-weight:bold;">Get Quote</a></li>
-    </ul>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="DataNiks-services.html">Services</a></li>
+    <li><a href="DataNiks-process.html">Process</a></li>
+    <li><a href="DataNiks-cases.html">Case Studies</a></li>
+    <li><a class="nav-cta" href="DataNiks-contact.html">Get Quote</a></li>
+  </ul>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-    <div>
-        <h1>Book a Free Consultation</h1>
-
-        <p style="max-width:700px;margin:auto;color:var(--text-secondary);">
-            Schedule a 30-minute call to discuss your data challenges and get practical recommendations for your business.
-        </p>
-    </div>
+<section class="contact-hero">
+  <h1>Book a Free Consultation</h1>
+  <p>Schedule a 30-minute call to discuss your data challenges and get practical recommendations for your business.</p>
 </section>
 
-<!-- WHAT YOU GET -->
 <section class="section">
-    <h2 style="text-align:center;">What You'll Get</h2>
+  <div class="section-inner contact-grid">
+    <aside class="contact-card">
+      <h3>What You’ll Get</h3>
+      <div class="benefits">
+        <div class="benefit">Review of your current data setup</div>
+        <div class="benefit">Identify key problems and opportunities</div>
+        <div class="benefit">Recommendations tailored to your business</div>
+        <div class="benefit">Clear next steps, no obligation</div>
+      </div>
+      <p class="note">Limited slots available each week.</p>
+    </aside>
 
-    <div style="max-width:800px;margin:auto;text-align:center;color:var(--text-secondary);">
-        <p>✔ Review of your current data setup</p>
-        <p>✔ Identify key problems and opportunities</p>
-        <p>✔ Recommendations tailored to your business</p>
-        <p>✔ Clear next steps (no obligation)</p>
+    <div class="calendly-wrap">
+      <h3 style="margin:0;text-align:center;color:var(--text-primary);font-size:1.4rem;">Schedule Your Call</h3>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/d/cyt7-cgn-nzx"></div>
     </div>
+  </div>
 </section>
-<p style="text-align:center;color:var(--text-secondary);">
-Limited slots available each week.
-</p>
-<!-- CALENDLY -->
+
 <section class="section">
-    <div style="max-width:900px;margin:auto;">
-
-        <div class="glass-card" style="padding:2rem;">
-            <h3 style="text-align:center;">Schedule Your Call</h3>
-
-            <div class="calendly-inline-widget"
-                 data-url="https://calendly.com/d/cyt7-cgn-nzx"
-                 style="min-width:320px;height:750px;margin-top:2rem;">
-            </div>
-        </div>
-
+  <div class="section-inner">
+    <div class="contact-card" style="max-width:900px;margin:0 auto;">
+      <h3>What Happens After You Book?</h3>
+      <div class="steps">
+        <div class="step"><strong>1. Confirmation:</strong> You receive an instant email with meeting details.</div>
+        <div class="step"><strong>2. Preparation:</strong> We review your requirements before the call.</div>
+        <div class="step"><strong>3. Consultation:</strong> A focused 30-minute discussion on your data and goals.</div>
+        <div class="step"><strong>4. Action Plan:</strong> Clear next steps tailored to your business.</div>
+      </div>
+      <p style="margin-top:16px;color:var(--text-secondary);text-align:center;">No sales pressure. Just practical insights.</p>
     </div>
+  </div>
 </section>
 
-<!-- PROCESS AFTER BOOKING -->
 <section class="section">
-    <div class="glass-card" style="max-width:800px;margin:auto;padding:2rem;">
-
-        <h3>What Happens After You Book?</h3>
-
-        <p><strong>1. Confirmation:</strong> You receive an instant email with meeting details.</p>
-
-        <p><strong>2. Preparation:</strong> We review your requirements before the call.</p>
-
-        <p><strong>3. Consultation:</strong> A focused 30-minute discussion on your data and goals.</p>
-
-        <p><strong>4. Action Plan:</strong> Clear next steps tailored to your business.</p>
-
-        <p style="margin-top:1rem;color:var(--text-secondary);">
-            No sales pressure. Just practical insights.
-        </p>
-
+  <div class="section-inner">
+    <div class="alt-contact">
+      <h2 style="margin:0 0 10px;">Prefer Email?</h2>
+      <p>You can also reach us directly.</p>
+      <a class="email-link" href="mailto:datanikadmin@gmail.com">datanikadmin@gmail.com</a>
     </div>
+  </div>
 </section>
 
-<!-- ALTERNATIVE CONTACT -->
-<section class="section" style="text-align:center;">
-
-    <h2>Prefer Email?</h2>
-
-    <p style="color:var(--text-secondary);">
-        You can also reach us directly.
-    </p>
-
-    <p><strong>Email:</strong> datanikadmin@gmail.com</p>
-
-</section>
-
-<!-- CALENDLY SCRIPT -->
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
 <script src="script.js"></script>
-
 </body>
 </html>
