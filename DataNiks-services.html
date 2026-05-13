@@ -1,111 +1,99 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Data Analytics Services | Power BI, SQL & Python | DataNiks LLC</title>
-
 <meta name="description" content="Explore DataNiks LLC services: data cleaning, Power BI dashboards, SQL solutions, and automation for small businesses.">
-
 <link rel="stylesheet" href="styles.css">
+<style>
+.services-hero{padding:130px 20px 90px;background:radial-gradient(1200px 500px at 50% 0%, rgba(109,94,252,.14), transparent 60%)}
+.services-hero h1{max-width:980px;margin:0 auto 18px;text-align:center;font-size:clamp(2.4rem,5vw,4.8rem);line-height:1.03;letter-spacing:-.04em}
+.services-hero p{max-width:760px;margin:0 auto;text-align:center;font-size:1.12rem;line-height:1.8;color:var(--text-secondary)}
+.services-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.service-card{position:relative;overflow:hidden;padding:30px;border-radius:24px;background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--border);box-shadow:var(--shadow);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.service-card::before{content:'';position:absolute;inset:auto -40px -60px auto;width:170px;height:170px;background:radial-gradient(circle, rgba(109,94,252,.18), transparent 70%);pointer-events:none}
+.service-card:hover{transform:translateY(-8px);border-color:rgba(255,255,255,.16);box-shadow:0 30px 75px rgba(0,0,0,.38)}
+.service-badge{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:46px;padding:0 14px;border-radius:16px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-weight:800;box-shadow:0 10px 28px rgba(109,94,252,.28);margin-bottom:18px}
+.service-card h3{margin:0 0 12px;font-size:1.22rem;line-height:1.25;color:var(--text-primary)}
+.service-card p{margin:0 0 16px;color:var(--text-secondary);line-height:1.72;font-size:1rem}
+.service-list{margin:0;padding-left:18px;color:var(--text-secondary);line-height:1.8}
+.service-list li{margin-bottom:8px}
+.packages-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.package-card{position:relative;overflow:hidden;padding:30px;border-radius:24px;background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--border);box-shadow:var(--shadow);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.package-card:hover{transform:translateY(-8px);border-color:rgba(255,255,255,.16);box-shadow:0 30px 75px rgba(0,0,0,.38)}
+.package-pill{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(109,94,252,.12);color:var(--accent);font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.package-card h3{margin:0 0 12px;font-size:1.25rem;color:var(--text-primary)}
+.package-card p{margin:0 0 10px;color:var(--text-secondary);line-height:1.72}
+.note-panel{max-width:920px;margin:0 auto;padding:30px;border-radius:28px;background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--border);box-shadow:var(--shadow)}
+.note-panel p{margin:0;text-align:center;color:var(--text-secondary);line-height:1.8}
+.cta-panel{max-width:920px;margin:0 auto;padding:30px;border-radius:28px;background:linear-gradient(135deg, rgba(109,94,252,.16), rgba(79,209,197,.12));border:1px solid var(--border);text-align:center}
+.cta-panel p{margin:0 0 22px;color:var(--text-secondary);line-height:1.7}
+.service-section{padding:92px 20px}
+.section-title{margin:0 0 14px;text-align:center;font-size:clamp(2rem,3.5vw,3.25rem);line-height:1.08}
+.section-subtitle{max-width:760px;margin:0 auto 44px;text-align:center;color:var(--text-secondary);line-height:1.75;font-size:1.05rem}
+@media (max-width:1000px){.packages-grid,.services-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:680px){.packages-grid,.services-grid{grid-template-columns:1fr}.services-hero{padding-top:110px}}
+</style>
 </head>
 <body class="dark">
 <nav><ul><li><a href="index.html">Home</a></li><li><a href="DataNiks-services.html">Services</a></li><li><a href="DataNiks-process.html">Process</a></li><li><a href="DataNiks-cases.html">Case Studies</a></li><li><a href="DataNiks-contact.html">Contact</a></li></ul></nav>
-<section class="hero" style="padding:120px 0">
-  <div>
-    <h1>Data Analytics Services</h1>
-
-    <p style="font-size:1.5rem;color:var(--text-secondary);max-width:700px;margin:auto;">
-      Practical data solutions designed to save time, reduce manual work, and help you make better business decisions.
-    </p>
+<section class="services-hero">
+  <h1>Data Analytics Services</h1>
+  <p>Practical data solutions designed to save time, reduce manual work, and help you make better business decisions.</p>
+</section>
+<section class="service-section">
+  <div class="section-inner">
+    <h2 class="section-title">Core Services</h2>
+    <p class="section-subtitle">Flexible support for unstructured data, reporting, automation, and dashboards.</p>
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="service-badge">01</div>
+        <h3>Unstructured Data Organization</h3>
+        <p>Turn scattered files, PDFs, forms, emails, and notes into structured, usable data that supports reporting, dashboards, and business decisions.</p>
+        <ul class="service-list"><li>PDF and form data extraction</li><li>File and document categorization</li><li>Structured tables for analysis</li></ul>
+      </article>
+      <article class="service-card">
+        <div class="service-badge">02</div>
+        <h3>Data Cleaning &amp; Preparation</h3>
+        <p>Fix messy spreadsheets, remove duplicates, handle missing values, and organize your data for accurate analysis.</p>
+        <ul class="service-list"><li>Excel &amp; CSV cleanup</li><li>Data validation</li><li>ETL pipelines</li></ul>
+      </article>
+      <article class="service-card">
+        <div class="service-badge">03</div>
+        <h3>Dashboard Development (Power BI)</h3>
+        <p>Build interactive dashboards that give you clear insights into your business performance.</p>
+        <ul class="service-list"><li>Sales dashboards</li><li>KPI tracking</li><li>Custom reports</li></ul>
+      </article>
+      <article class="service-card">
+        <div class="service-badge">04</div>
+        <h3>Automation with Python</h3>
+        <p>Automate repetitive reports and workflows to save time and reduce errors.</p>
+        <ul class="service-list"><li>Report automation</li><li>Data processing scripts</li><li>Scheduled workflows</li></ul>
+      </article>
+    </div>
   </div>
 </section>
-<section class="section">
-  <div class="services-grid">
-    <div class="glass-card">
-  <h3>Unstructured Data Organization</h3>
-  <p>
-    Turn scattered files, PDFs, forms, emails, and notes into structured, usable data that supports reporting, dashboards, and business decisions.
-  </p>
-  <ul>
-    <li>PDF and form data extraction</li>
-    <li>File and document categorization</li>
-    <li>Structured tables for analysis</li>
-  </ul>
-</div>
-    <div class="glass-card">
-      <h3>Data Cleaning & Preparation</h3>
-      <p>
-        Fix messy spreadsheets, remove duplicates, handle missing values, and organize your data for accurate analysis.
-      </p>
-      <ul>
-        <li>Excel & CSV cleanup</li>
-        <li>Data validation</li>
-        <li>ETL pipelines</li>
-      </ul>
+<section class="service-section">
+  <div class="section-inner">
+    <h2 class="section-title">Service Packages</h2>
+    <div class="packages-grid">
+      <article class="package-card"><div class="package-pill">Starter</div><h3>Starter</h3><p>Basic data cleanup and simple reporting.</p><p><strong>Best for:</strong> Small businesses starting with data</p></article>
+      <article class="package-card"><div class="package-pill">Growth</div><h3>Growth</h3><p>Advanced dashboards and automation.</p><p><strong>Best for:</strong> Growing businesses needing insights</p></article>
+      <article class="package-card"><div class="package-pill">Custom</div><h3>Custom</h3><p>Tailored solutions for your business needs.</p><p><strong>Best for:</strong> Complex data projects</p></article>
     </div>
-
-    <div class="glass-card">
-      <h3>Dashboard Development (Power BI)</h3>
-      <p>
-        Build interactive dashboards that give you clear insights into your business performance.
-      </p>
-      <ul>
-        <li>Sales dashboards</li>
-        <li>KPI tracking</li>
-        <li>Custom reports</li>
-      </ul>
-    </div>
-
-    <div class="glass-card">
-      <h3>Automation with Python</h3>
-      <p>
-        Automate repetitive reports and workflows to save time and reduce errors.
-      </p>
-      <ul>
-        <li>Report automation</li>
-        <li>Data processing scripts</li>
-        <li>Scheduled workflows</li>
-      </ul>
-    </div>
-
   </div>
 </section>
-<section class="section">
-  <h2 style="text-align:center;">Service Packages</h2>
-
-  <div class="services-grid">
-
-    <div class="glass-card">
-      <h3>Starter</h3>
-      <p>Basic data cleanup and simple reporting.</p>
-      <p><strong>Best for:</strong> Small businesses starting with data</p>
-    </div>
-
-    <div class="glass-card">
-      <h3>Growth</h3>
-      <p>Advanced dashboards and automation.</p>
-      <p><strong>Best for:</strong> Growing businesses needing insights</p>
-    </div>
-
-    <div class="glass-card">
-      <h3>Custom</h3>
-      <p>Tailored solutions for your business needs.</p>
-      <p><strong>Best for:</strong> Complex data projects</p>
-    </div>
-
+<section class="service-section">
+  <div class="note-panel">
+    <p>Not every business needs the same setup. We’ll recommend the most practical solution based on your goals, data quality, and reporting needs.</p>
   </div>
 </section>
-<section class="section" style="text-align:center;">
-  <h2>Not Sure What You Need?</h2>
-
-  <p style="color:var(--text-secondary);margin-bottom:2rem;">
-    Book a free consultation and we’ll recommend the best solution for your business.
-  </p>
-
-  <a href="DataNiks-contact.html" style="background:var(--accent);padding:1rem 3rem;border-radius:50px;color:white;font-weight:600;text-decoration:none;">
-    Get Free Consultation
-  </a>
+<section class="service-section">
+  <div class="cta-panel">
+    <h2 style="margin:0 0 12px;">Not Sure What You Need?</h2>
+    <p>Book a free consultation and we’ll recommend the best solution for your business.</p>
+    <a class="btn btn-primary" href="DataNiks-contact.html">Get Free Consultation</a>
+  </div>
 </section>
-
 <script src="script.js"></script></body></html>
