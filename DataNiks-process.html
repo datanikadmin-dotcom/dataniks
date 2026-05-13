@@ -1,98 +1,97 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Our Process - DataNiks LLC</title><link rel="stylesheet" href="styles.css"></head><body class="dark">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Process - DataNiks LLC</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.process-hero{padding:130px 20px 90px;background:radial-gradient(1200px 500px at 50% 0%, rgba(109,94,252,.14), transparent 60%)}
+.process-hero h1{max-width:980px;margin:0 auto 18px;text-align:center;font-size:clamp(2.4rem,5vw,4.8rem);line-height:1.03;letter-spacing:-.04em}
+.process-hero p{max-width:760px;margin:0 auto;text-align:center;font-size:1.12rem;line-height:1.8;color:var(--text-secondary)}
+.process-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.process-card{position:relative;overflow:hidden;padding:30px;border-radius:24px;background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--border);box-shadow:var(--shadow);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.process-card::before{content:'';position:absolute;inset:auto -40px -60px auto;width:170px;height:170px;background:radial-gradient(circle, rgba(109,94,252,.18), transparent 70%);pointer-events:none}
+.process-card:hover{transform:translateY(-8px);border-color:rgba(255,255,255,.16);box-shadow:0 30px 75px rgba(0,0,0,.38)}
+.process-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+.process-badge{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:46px;padding:0 14px;border-radius:16px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-weight:800;box-shadow:0 10px 28px rgba(109,94,252,.28)}
+.process-tag{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-secondary);font-weight:700}
+.process-card h3{margin:0 0 12px;font-size:1.22rem;line-height:1.25;color:var(--text-primary)}
+.process-card p{margin:0 0 16px;color:var(--text-secondary);line-height:1.72;font-size:1rem}
+.process-list{margin:0;padding-left:18px;color:var(--text-secondary);line-height:1.8}
+.process-list li{margin-bottom:8px}
+.note-panel{max-width:920px;margin:0 auto;padding:30px;border-radius:28px;background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--border);box-shadow:var(--shadow)}
+.note-panel p{margin:0;text-align:center;color:var(--text-secondary);line-height:1.8}
+.cta-panel{max-width:920px;margin:0 auto;padding:30px;border-radius:28px;background:linear-gradient(135deg, rgba(109,94,252,.16), rgba(79,209,197,.12));border:1px solid var(--border);text-align:center}
+.cta-panel p{margin:0 0 22px;color:var(--text-secondary);line-height:1.7}
+.process-section{padding:92px 20px}
+@media (max-width:900px){.process-grid{grid-template-columns:1fr}.process-hero{padding-top:110px}}
+</style>
+</head>
+<body class="dark">
 <nav><ul><li><a href="index.html">Home</a></li><li><a href="DataNiks-services.html">Services</a></li><li><a href="DataNiks-process.html">Process</a></li><li><a href="DataNiks-cases.html">Case Studies</a></li><li><a href="DataNiks-contact.html">Contact</a></li></ul></nav>
-<section class="hero">
-  <div>
-    <h1>Our Data Analytics Process</h1>
-
-    <p style="max-width:700px;margin:auto;color:var(--text-secondary);font-size:1.4rem;">
-      A simple, transparent process designed to take your data from messy to actionable — typically within 2–4 weeks.
-    </p>
+<section class="process-hero">
+  <h1>Our Data Analytics Process</h1>
+  <p>A simple, transparent process designed to take your data from messy to actionable — typically within 2–4 weeks.</p>
+</section>
+<section class="process-section">
+  <div class="section-inner">
+    <div class="process-grid">
+      <article class="process-card">
+        <div class="process-top"><div class="process-badge">01</div><div class="process-tag">Discovery</div></div>
+        <h3>Discovery &amp; Planning</h3>
+        <p>We start with a consultation to understand your business goals, challenges, and data sources.</p>
+        <ul class="process-list">
+          <li>Free consultation call</li>
+          <li>Data review</li>
+          <li>Define project scope</li>
+        </ul>
+      </article>
+      <article class="process-card">
+        <div class="process-top"><div class="process-badge">02</div><div class="process-tag">Preparation</div></div>
+        <h3>Data Cleaning &amp; Preparation</h3>
+        <p>Your data is cleaned, structured, and prepared for accurate analysis.</p>
+        <ul class="process-list">
+          <li>Fix missing or inconsistent data</li>
+          <li>Remove duplicates</li>
+          <li>Build data pipelines</li>
+        </ul>
+      </article>
+      <article class="process-card">
+        <div class="process-top"><div class="process-badge">03</div><div class="process-tag">Insights</div></div>
+        <h3>Analysis &amp; Insights</h3>
+        <p>We analyze your data to uncover trends, patterns, and key business insights.</p>
+        <ul class="process-list">
+          <li>KPI analysis</li>
+          <li>Trend identification</li>
+          <li>Custom reporting</li>
+        </ul>
+      </article>
+      <article class="process-card">
+        <div class="process-top"><div class="process-badge">04</div><div class="process-tag">Delivery</div></div>
+        <h3>Dashboard &amp; Delivery</h3>
+        <p>You receive clear dashboards and reports along with guidance on how to use them.</p>
+        <ul class="process-list">
+          <li>Power BI dashboards</li>
+          <li>Final reports</li>
+          <li>Walkthrough &amp; support</li>
+        </ul>
+      </article>
+    </div>
   </div>
 </section>
-<section class="section">
-  <div class="services-grid">
-
-    <div class="glass-card step-card">
-      <h3>1. Discovery & Planning</h3>
-      <p>
-        We start with a consultation to understand your business goals, challenges, and data sources.
-      </p>
-      <ul>
-        <li>Free consultation call</li>
-        <li>Data review</li>
-        <li>Define project scope</li>
-      </ul>
-    </div>
-
-    <div class="glass-card step-card">
-      <h3>2. Data Cleaning & Preparation</h3>
-      <p>
-        Your data is cleaned, structured, and prepared for accurate analysis.
-      </p>
-      <ul>
-        <li>Fix missing or inconsistent data</li>
-        <li>Remove duplicates</li>
-        <li>Build data pipelines</li>
-      </ul>
-    </div>
-
-    <div class="glass-card step-card">
-      <h3>3. Analysis & Insights</h3>
-      <p>
-        We analyze your data to uncover trends, patterns, and key business insights.
-      </p>
-      <ul>
-        <li>KPI analysis</li>
-        <li>Trend identification</li>
-        <li>Custom reporting</li>
-      </ul>
-    </div>
-
-    <div class="glass-card step-card">
-      <h3>4. Dashboard & Delivery</h3>
-      <p>
-        You receive clear dashboards and reports along with guidance on how to use them.
-      </p>
-      <ul>
-        <li>Power BI dashboards</li>
-        <li>Final reports</li>
-        <li>Walkthrough & support</li>
-      </ul>
-    </div>
-
+<section class="process-section">
+  <div class="note-panel">
+    <p>This process is designed to keep communication clear, reduce delays, and make sure the final solution is practical for your business.</p>
   </div>
 </section>
-<section class="section">
-  <h2 style="text-align:center;">Typical Timeline</h2>
-
-  <div style="max-width:800px;margin:auto;color:var(--text-secondary);">
-
-    <p><strong>Week 1:</strong> Discovery & data review</p>
-    <p><strong>Week 2:</strong> Data cleaning & preparation</p>
-    <p><strong>Week 3:</strong> Analysis & dashboard development</p>
-    <p><strong>Week 4:</strong> Final delivery & revisions</p>
-
+<section class="process-section">
+  <div class="cta-panel">
+    <h2 style="margin:0 0 12px;">Ready to Get Started?</h2>
+    <p>Book a free consultation and we’ll map out the right process for your needs.</p>
+    <a class="btn btn-primary" href="DataNiks-contact.html">Book Free Consultation</a>
   </div>
 </section>
-<section class="section">
-  <h2 style="text-align:center;">What We Need From You</h2>
-
-  <div style="max-width:800px;margin:auto;color:var(--text-secondary);text-align:center;">
-    <p>Access to your data (Excel, database, etc.)</p>
-    <p>Clear business goals or questions</p>
-    <p>Feedback during review stages</p>
-  </div>
-</section>
-
-<section class="section" style="text-align:center;">
-  <h2>Ready to Get Started?</h2>
-
-  <p style="color:var(--text-secondary);margin-bottom:2rem;">
-    Book a free consultation and we’ll walk you through the process.
-  </p>
-
-  <a href="DataNiks-contact.html" style="background:var(--accent);padding:1rem 3rem;border-radius:50px;color:white;font-weight:600;text-decoration:none;">
-    Book Free Consultation
-  </a>
-</section>
-<script src="script.js"></script></body></html>
+<script src="script.js"></script>
+</body>
+</html>
