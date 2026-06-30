@@ -7,45 +7,106 @@
 <meta name="description" content="Explore DataNiks LLC services: data cleaning, Power BI dashboards, SQL solutions, and automation for small businesses.">
 <link rel="stylesheet" href="styles.css">
 <style>
-.services-hero{padding:130px 20px 90px;background:radial-gradient(1200px 500px at 50% 0%, rgba(109,94,252,.14), transparent 60%)}
+.services-hero{padding:130px 20px 90px;background:radial-gradient(1200px 500px at 50% 0%, rgba(201,164,76,.09), transparent 60%)}
 .services-hero h1{max-width:980px;margin:0 auto 18px;text-align:center;font-size:clamp(2.4rem,5vw,4.8rem);line-height:1.03;letter-spacing:-.04em}
 .services-hero p{max-width:760px;margin:0 auto;text-align:center;font-size:1.12rem;line-height:1.8;color:var(--text-secondary)}
 .services-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
 .service-card{position:relative;overflow:hidden;padding:30px;border-radius:24px;background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--border);box-shadow:var(--shadow);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
-.service-card::before{content:'';position:absolute;inset:auto -40px -60px auto;width:170px;height:170px;background:radial-gradient(circle, rgba(109,94,252,.18), transparent 70%);pointer-events:none}
-.service-card:hover{transform:translateY(-8px);border-color:rgba(255,255,255,.16);box-shadow:0 30px 75px rgba(0,0,0,.38)}
-.service-badge{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:46px;padding:0 14px;border-radius:16px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-weight:800;box-shadow:0 10px 28px rgba(109,94,252,.28);margin-bottom:18px}
+.service-card::before{content:'';position:absolute;inset:auto -40px -60px auto;width:170px;height:170px;background:radial-gradient(circle, rgba(201,164,76,.10), transparent 70%);pointer-events:none}
+.service-card:hover{transform:translateY(-8px);border-color:rgba(28,52,105,.2);box-shadow:0 30px 75px rgba(13,27,56,.18)}
+.service-badge{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:46px;padding:0 14px;border-radius:16px;background:var(--navy);color:var(--gold);font-weight:800;box-shadow:0 10px 28px rgba(28,52,105,.28);margin-bottom:18px}
 .service-card h3{margin:0 0 12px;font-size:1.22rem;line-height:1.25;color:var(--text-primary)}
 .service-card p{margin:0 0 16px;color:var(--text-secondary);line-height:1.72;font-size:1rem}
 .service-list{margin:0;padding-left:18px;color:var(--text-secondary);line-height:1.8}
 .service-list li{margin-bottom:8px}
-.packages-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.package-card{position:relative;overflow:hidden;padding:30px;border-radius:24px;background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--border);box-shadow:var(--shadow);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
-.package-card:hover{transform:translateY(-8px);border-color:rgba(255,255,255,.16);box-shadow:0 30px 75px rgba(0,0,0,.38)}
-.package-pill{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(109,94,252,.12);color:var(--accent);font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
-.package-card h3{margin:0 0 12px;font-size:1.25rem;color:var(--text-primary)}
+.packages-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}
+.package-card{
+  position:relative;overflow:visible;
+  padding:36px 32px;border-radius:24px;
+  background:var(--panel);
+  border:1px solid var(--border);box-shadow:var(--shadow);
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+  display:flex;flex-direction:column;
+}
+.package-card:hover{transform:translateY(-6px);border-color:rgba(28,52,105,.2);box-shadow:var(--shadow-md)}
+/* Popular (middle) card */
+.package-card.popular{
+  background:var(--navy);
+  border-color:var(--navy);
+  box-shadow:0 20px 60px rgba(28,52,105,.35);
+  padding-top:52px;
+}
+.package-card.popular:hover{transform:translateY(-8px);box-shadow:0 30px 80px rgba(28,52,105,.45)}
+.popular-badge{
+  position:absolute;top:0;left:50%;transform:translateX(-50%) translateY(-50%);
+  background:var(--gold);color:var(--navy);
+  font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  padding:5px 18px;border-radius:999px;white-space:nowrap;
+}
+.package-pill{
+  display:inline-flex;padding:6px 14px;border-radius:999px;
+  background:var(--gold-pale);color:var(--gold);
+  border:1px solid rgba(201,164,76,.22);
+  font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  margin-bottom:20px;align-self:flex-start;
+}
+.package-card.popular .package-pill{background:rgba(201,164,76,.18);border-color:rgba(201,164,76,.35)}
+.package-card h3{margin:0 0 6px;font-size:1.22rem;color:var(--text-primary);font-weight:800}
+.package-card.popular h3{color:#fff}
+.pkg-price{
+  display:flex;align-items:baseline;gap:4px;
+  margin:4px 0 6px;
+}
+.pkg-amount{font-size:2.6rem;font-weight:900;color:var(--navy);letter-spacing:-.04em;line-height:1}
+.package-card.popular .pkg-amount{color:var(--gold)}
+.pkg-period{font-size:.85rem;color:var(--text-secondary);font-weight:500}
+.package-card.popular .pkg-period{color:rgba(255,255,255,.55)}
+.pkg-tagline{font-size:.9rem;color:var(--text-secondary);margin:0 0 22px;line-height:1.5}
+.package-card.popular .pkg-tagline{color:rgba(255,255,255,.65)}
+.pkg-divider{border:none;border-top:1px solid var(--border);margin:0 0 20px}
+.package-card.popular .pkg-divider{border-color:rgba(255,255,255,.12)}
+.pkg-label{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-secondary);margin-bottom:12px}
+.package-card.popular .pkg-label{color:rgba(255,255,255,.45)}
+.check-list{list-style:none;padding:0;margin:0 0 28px;display:flex;flex-direction:column;gap:10px}
+.check-list li{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:.9rem;color:var(--text-secondary);line-height:1.45;
+}
+.package-card.popular .check-list li{color:rgba(255,255,255,.75)}
+.check-list li::before{
+  content:'✓';
+  flex-shrink:0;width:18px;height:18px;border-radius:50%;
+  background:var(--gold-pale);color:var(--gold);
+  font-size:.65rem;font-weight:900;
+  display:grid;place-items:center;margin-top:1px;
+}
+.package-card.popular .check-list li::before{background:rgba(201,164,76,.18)}
+.pkg-btn{
+  display:block;text-align:center;
+  padding:13px 20px;border-radius:10px;
+  font-weight:700;font-size:.93rem;
+  background:var(--navy);color:#fff;
+  transition:background .15s,transform .15s;
+  margin-top:auto;
+}
+.pkg-btn:hover{background:var(--navy-dark);transform:translateY(-2px)}
+.package-card.popular .pkg-btn{background:var(--gold);color:var(--navy)}
+.package-card.popular .pkg-btn:hover{background:var(--gold-light)}
 .package-card p{margin:0 0 10px;color:var(--text-secondary);line-height:1.72}
 .note-panel{max-width:920px;margin:0 auto;padding:30px;border-radius:28px;background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--border);box-shadow:var(--shadow)}
 .note-panel p{margin:0;text-align:center;color:var(--text-secondary);line-height:1.8}
-.cta-panel{max-width:920px;margin:0 auto;padding:30px;border-radius:28px;background:linear-gradient(135deg, rgba(109,94,252,.16), rgba(79,209,197,.12));border:1px solid var(--border);text-align:center}
-.cta-panel p{margin:0 0 22px;color:var(--text-secondary);line-height:1.7}
+.cta-panel{max-width:920px;margin:0 auto;padding:44px;border-radius:28px;background:linear-gradient(135deg,var(--navy),var(--navy-dark));border:1px solid transparent;text-align:center}
+.cta-panel h2{color:#fff!important}
+.cta-panel p{margin:0 0 22px;color:rgba(255,255,255,.72);line-height:1.7}
 .service-section{padding:92px 20px}
 .section-title{margin:0 0 14px;text-align:center;font-size:clamp(2rem,3.5vw,3.25rem);line-height:1.08}
 .section-subtitle{max-width:760px;margin:0 auto 44px;text-align:center;color:var(--text-secondary);line-height:1.75;font-size:1.05rem}
 @media (max-width:1000px){.packages-grid,.services-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:680px){.packages-grid,.services-grid{grid-template-columns:1fr}.services-hero{padding-top:110px}}
-  footer{
-    text-align:center;
-    padding:25px 20px;
-    font-size:0.95rem;
-    color:var(--text-secondary);
-    border-top:1px solid rgba(0,0,0,0.08);
-    margin-top:40px;
-}
 </style>
 </head>
-<body class="dark">
-<nav><ul><li><a href="index.html">Home</a></li><li><a href="DataNiks-services.html">Services</a></li><li><a href="DataNiks-process.html">Process</a></li><li><a href="DataNiks-cases.html">Case Studies</a></li><li><a href="DataNiks-contact.html">Contact</a></li><li><a class="nav-cta" href="DataNiks-contact.html">Get Quote</a></li></ul></nav>
+<body class="light">
+<nav><ul><li class="nav-brand"><a href="index.html"><img src="logo.png" alt="DataNiks LLC" class="nav-logo"></a></li><li><a href="index.html">Home</a></li><li><a href="DataNiks-services.html">Services</a></li><li><a href="DataNiks-process.html">Process</a></li><li><a href="DataNiks-cases.html">Case Studies</a></li><li><a href="DataNiks-contact.html">Contact</a></li><li class="nav-spacer"></li><li><a class="nav-cta" href="DataNiks-contact.html">Get Quote</a></li></ul></nav>
 <section class="services-hero">
   <h1>Data Analytics Services</h1>
   <p>Practical data solutions designed to save time, reduce manual work, and help you make better business decisions.</p>
@@ -84,11 +145,73 @@
 </section>
 <section class="service-section">
   <div class="section-inner">
-    <h2 class="section-title">Service Packages</h2>
+    <h2 class="section-title">Service Packages &amp; Pricing</h2>
+    <p class="section-subtitle">Transparent, flat-rate packages — no surprises. All prices are in USD. Not sure which fits? Book a free call and we'll recommend the right one.</p>
     <div class="packages-grid">
-      <article class="package-card"><div class="package-pill">Starter</div><h3>Starter</h3><p>Basic data cleanup and simple reporting.</p><p><strong>Best for:</strong> Small businesses starting with data</p></article>
-      <article class="package-card"><div class="package-pill">Growth</div><h3>Growth</h3><p>Advanced dashboards and automation.</p><p><strong>Best for:</strong> Growing businesses needing insights</p></article>
-      <article class="package-card"><div class="package-pill">Custom</div><h3>Custom</h3><p>Tailored solutions for your business needs.</p><p><strong>Best for:</strong> Complex data projects</p></article>
+
+      <!-- STARTER -->
+      <article class="package-card">
+        <div class="package-pill">Starter</div>
+        <h3>Starter</h3>
+        <div class="pkg-price">
+          <span class="pkg-amount">$299</span>
+          <span class="pkg-period">/ one-time</span>
+        </div>
+        <p class="pkg-tagline">Get your data cleaned up and your first report in place.</p>
+        <hr class="pkg-divider">
+        <p class="pkg-label">What's included</p>
+        <ul class="check-list">
+          <li>Data cleaning (up to 3 files)</li>
+          <li>Excel or CSV restructuring</li>
+          <li>Summary report or chart</li>
+          <li>1 revision round</li>
+          <li>Delivery within 5 business days</li>
+        </ul>
+        <a class="pkg-btn" href="DataNiks-contact.html">Get Started</a>
+      </article>
+
+      <!-- GROWTH (popular) -->
+      <article class="package-card popular">
+        <div class="popular-badge">Most Popular</div>
+        <div class="package-pill">Growth</div>
+        <h3>Growth</h3>
+        <div class="pkg-price">
+          <span class="pkg-amount">$699</span>
+          <span class="pkg-period">/ project</span>
+        </div>
+        <p class="pkg-tagline">Dashboards, automation, and ongoing visibility for your business.</p>
+        <hr class="pkg-divider">
+        <p class="pkg-label">Everything in Starter, plus</p>
+        <ul class="check-list">
+          <li>Data cleaning + pipeline setup</li>
+          <li>Power BI or Excel dashboard</li>
+          <li>Python-automated reports (weekly/monthly)</li>
+          <li>2 revision rounds</li>
+          <li>30-day post-delivery support</li>
+        </ul>
+        <a class="pkg-btn" href="DataNiks-contact.html">Get Started</a>
+      </article>
+
+      <!-- CUSTOM -->
+      <article class="package-card">
+        <div class="package-pill">Custom</div>
+        <h3>Custom</h3>
+        <div class="pkg-price">
+          <span class="pkg-amount">Let's talk</span>
+        </div>
+        <p class="pkg-tagline">A fully scoped engagement tailored to your specific needs.</p>
+        <hr class="pkg-divider">
+        <p class="pkg-label">What's included</p>
+        <ul class="check-list">
+          <li>Free discovery &amp; scoping call</li>
+          <li>Custom data architecture or ETL pipeline</li>
+          <li>Advanced dashboards &amp; automation</li>
+          <li>SQL database setup or integration</li>
+          <li>Ongoing maintenance available</li>
+        </ul>
+        <a class="pkg-btn" href="DataNiks-contact.html">Book a Call</a>
+      </article>
+
     </div>
   </div>
 </section>
@@ -101,10 +224,20 @@
   <div class="cta-panel">
     <h2 style="margin:0 0 12px;">Not Sure What You Need?</h2>
     <p>Book a free consultation and we’ll recommend the best solution for your business.</p>
-    <a class="btn btn-primary" href="DataNiks-contact.html">Get Free Consultation</a>
+    <a class="btn btn-gold" href="DataNiks-contact.html">Get Free Consultation</a>
   </div>
 </section>
-  <footer>
-    © 2026 DataNiks LLC. All Rights Reserved.
+<footer>
+  <div class="footer-inner">
+    <img src="logo.png" alt="DataNiks LLC" class="footer-logo">
+    <nav class="footer-links">
+      <a href="DataNiks-services.html">Services</a>
+      <a href="DataNiks-process.html">Process</a>
+      <a href="DataNiks-cases.html">Case Studies</a>
+      <a href="DataNiks-contact.html">Contact</a>
+    </nav>
+    <span class="footer-badge">Women-Owned Business</span>
+  </div>
+  <p class="footer-copy">© 2026 DataNiks LLC. All Rights Reserved.</p>
 </footer>
 <script src="script.js"></script></body></html>
