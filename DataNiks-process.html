@@ -6,15 +6,15 @@
 <title>Our Process - DataNiks LLC</title>
 <link rel="stylesheet" href="styles.css">
 <style>
-.process-hero{padding:130px 20px 90px;background:radial-gradient(1200px 500px at 50% 0%, rgba(109,94,252,.14), transparent 60%)}
+.process-hero{padding:130px 20px 90px;background:radial-gradient(1200px 500px at 50% 0%, rgba(201,164,76,.09), transparent 60%)}
 .process-hero h1{max-width:980px;margin:0 auto 18px;text-align:center;font-size:clamp(2.4rem,5vw,4.8rem);line-height:1.03;letter-spacing:-.04em}
 .process-hero p{max-width:760px;margin:0 auto;text-align:center;font-size:1.12rem;line-height:1.8;color:var(--text-secondary)}
 .process-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
 .process-card{position:relative;overflow:hidden;padding:30px;border-radius:24px;background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--border);box-shadow:var(--shadow);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
-.process-card::before{content:'';position:absolute;inset:auto -40px -60px auto;width:170px;height:170px;background:radial-gradient(circle, rgba(109,94,252,.18), transparent 70%);pointer-events:none}
-.process-card:hover{transform:translateY(-8px);border-color:rgba(255,255,255,.16);box-shadow:0 30px 75px rgba(0,0,0,.38)}
+.process-card::before{content:'';position:absolute;inset:auto -40px -60px auto;width:170px;height:170px;background:radial-gradient(circle, rgba(201,164,76,.10), transparent 70%);pointer-events:none}
+.process-card:hover{transform:translateY(-8px);border-color:rgba(28,52,105,.2);box-shadow:0 30px 75px rgba(13,27,56,.18)}
 .process-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
-.process-badge{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:46px;padding:0 14px;border-radius:16px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-weight:800;box-shadow:0 10px 28px rgba(109,94,252,.28)}
+.process-badge{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:46px;padding:0 14px;border-radius:16px;background:var(--navy);color:#C9A44C;font-weight:800;box-shadow:0 10px 28px rgba(28,52,105,.28)}
 .process-tag{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-secondary);font-weight:700}
 .process-card h3{margin:0 0 12px;font-size:1.22rem;line-height:1.25;color:var(--text-primary)}
 .process-card p{margin:0 0 16px;color:var(--text-secondary);line-height:1.72;font-size:1rem}
@@ -22,22 +22,15 @@
 .process-list li{margin-bottom:8px}
 .note-panel{max-width:920px;margin:0 auto;padding:30px;border-radius:28px;background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--border);box-shadow:var(--shadow)}
 .note-panel p{margin:0;text-align:center;color:var(--text-secondary);line-height:1.8}
-.cta-panel{max-width:920px;margin:0 auto;padding:30px;border-radius:28px;background:linear-gradient(135deg, rgba(109,94,252,.16), rgba(79,209,197,.12));border:1px solid var(--border);text-align:center}
-.cta-panel p{margin:0 0 22px;color:var(--text-secondary);line-height:1.7}
+.cta-panel{max-width:920px;margin:0 auto;padding:44px;border-radius:28px;background:linear-gradient(135deg,var(--navy),var(--navy-dark));border:1px solid transparent;text-align:center}
+.cta-panel h2{color:#fff!important}
+.cta-panel p{margin:0 0 22px;color:rgba(255,255,255,.72);line-height:1.7}
 .process-section{padding:92px 20px}
 @media (max-width:900px){.process-grid{grid-template-columns:1fr}.process-hero{padding-top:110px}}
-  footer{
-    text-align:center;
-    padding:25px 20px;
-    font-size:0.95rem;
-    color:var(--text-secondary);
-    border-top:1px solid rgba(0,0,0,0.08);
-    margin-top:40px;
-}
 </style>
 </head>
-<body class="dark">
-<nav><ul><li><a href="index.html">Home</a></li><li><a href="DataNiks-services.html">Services</a></li><li><a href="DataNiks-process.html">Process</a></li><li><a href="DataNiks-cases.html">Case Studies</a></li><li><a href="DataNiks-contact.html">Contact</a></li><li><a class="nav-cta" href="DataNiks-contact.html">Get Quote</a></li></ul></nav>
+<body class="light">
+<nav><ul><li class="nav-brand"><a href="index.html"><img src="logo.png" alt="DataNiks LLC" class="nav-logo"></a></li><li><a href="index.html">Home</a></li><li><a href="DataNiks-services.html">Services</a></li><li><a href="DataNiks-process.html">Process</a></li><li><a href="DataNiks-cases.html">Case Studies</a></li><li><a href="DataNiks-contact.html">Contact</a></li><li class="nav-spacer"></li><li><a class="nav-cta" href="DataNiks-contact.html">Get Quote</a></li></ul></nav>
 <section class="process-hero">
   <h1>Our Data Analytics Process</h1>
   <p>A simple, transparent process designed to take your data from messy to actionable — typically within 2–4 weeks.</p>
@@ -97,11 +90,21 @@
   <div class="cta-panel">
     <h2 style="margin:0 0 12px;">Ready to Get Started?</h2>
     <p>Book a free consultation and we’ll map out the right process for your needs.</p>
-    <a class="btn btn-primary" href="DataNiks-contact.html">Book Free Consultation</a>
+    <a class="btn btn-gold" href="DataNiks-contact.html">Book Free Consultation</a>
   </div>
 </section>
-  <footer>
-    © 2026 DataNiks LLC. All Rights Reserved.
+<footer>
+  <div class="footer-inner">
+    <img src="logo.png" alt="DataNiks LLC" class="footer-logo">
+    <nav class="footer-links">
+      <a href="DataNiks-services.html">Services</a>
+      <a href="DataNiks-process.html">Process</a>
+      <a href="DataNiks-cases.html">Case Studies</a>
+      <a href="DataNiks-contact.html">Contact</a>
+    </nav>
+    <span class="footer-badge">Women-Owned Business</span>
+  </div>
+  <p class="footer-copy">© 2026 DataNiks LLC. All Rights Reserved.</p>
 </footer>
 <script src="script.js"></script>
 </body>
