@@ -7,7 +7,7 @@
 <meta name="description" content="Book a free consultation with DataNiks LLC. Get help with data analytics, Power BI dashboards, SQL, and automation.">
 <link rel="stylesheet" href="styles.css">
 <style>
-.contact-hero{padding:130px 20px 90px;background:radial-gradient(1200px 500px at 50% 0%, rgba(109,94,252,.14), transparent 60%)}
+.contact-hero{padding:130px 20px 90px;background:radial-gradient(1200px 500px at 50% 0%, rgba(201,164,76,.09), transparent 60%)}
 .contact-hero h1{max-width:980px;margin:0 auto 18px;text-align:center;font-size:clamp(2.4rem,5vw,4.8rem);line-height:1.03;letter-spacing:-.04em}
 .contact-hero p{max-width:760px;margin:0 auto;text-align:center;font-size:1.12rem;line-height:1.8;color:var(--text-secondary)}
 .contact-grid{display:grid;grid-template-columns:1fr;gap:24px}
@@ -21,29 +21,26 @@
 .steps{display:grid;gap:14px;margin-top:10px}
 .step{padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--border)}
 .step strong{color:var(--text-primary)}
-.alt-contact{max-width:900px;margin:0 auto;padding:30px;border-radius:28px;background:linear-gradient(135deg, rgba(109,94,252,.16), rgba(79,209,197,.12));border:1px solid var(--border);text-align:center}
+.alt-contact{max-width:900px;margin:0 auto;padding:30px;border-radius:28px;background:linear-gradient(135deg,var(--navy),var(--navy-dark));border:1px solid transparent;text-align:center}
+.alt-contact h2{color:#fff!important}
+.alt-contact p{color:rgba(255,255,255,.72)!important}
 .alt-contact p{margin:0;color:var(--text-secondary);line-height:1.7}
 .email-link{display:inline-flex;align-items:center;gap:10px;margin-top:14px;font-weight:800;color:var(--text-primary);text-decoration:none}
 .note{margin:12px 0 0;text-align:center;color:var(--text-secondary)}
 @media (min-width:900px){.contact-grid{grid-template-columns:360px minmax(0,1fr)}.benefits{grid-template-columns:1fr}.contact-card{position:sticky;top:96px}}
 @media (max-width:680px){.contact-hero{padding-top:110px}.calendly-inline-widget{height:680px}}
-  footer{
-    text-align:center;
-    padding:25px 20px;
-    font-size:0.95rem;
-    color:var(--text-secondary);
-    border-top:1px solid rgba(0,0,0,0.08);
-    margin-top:40px;
-}
 </style>
 </head>
-<body class="dark">
+<body class="light">
 <nav>
   <ul>
+    <li class="nav-brand"><a href="index.html"><img src="logo.png" alt="DataNiks LLC" class="nav-logo"></a></li>
     <li><a href="index.html">Home</a></li>
     <li><a href="DataNiks-services.html">Services</a></li>
     <li><a href="DataNiks-process.html">Process</a></li>
     <li><a href="DataNiks-cases.html">Case Studies</a></li>
+    <li><a href="DataNiks-contact.html">Contact</a></li>
+    <li class="nav-spacer"></li>
     <li><a class="nav-cta" href="DataNiks-contact.html">Get Quote</a></li>
   </ul>
 </nav>
@@ -96,14 +93,23 @@
     <div class="alt-contact">
       <h2 style="margin:0 0 10px;">Prefer Email?</h2>
       <p>You can also reach us directly.</p>
-      <a class="email-link" href="mailto:datanikadmin@gmail.com">datanikadmin@gmail.com</a>
+      <a class="email-link" href="mailto:datanikadmin@gmail.com" style="color:var(--gold)">datanikadmin@gmail.com</a>
     </div>
   </div>
 </section>
 <footer>
-    © 2026 DataNiks LLC. All Rights Reserved.
+  <div class="footer-inner">
+    <img src="logo.png" alt="DataNiks LLC" class="footer-logo">
+    <nav class="footer-links">
+      <a href="DataNiks-services.html">Services</a>
+      <a href="DataNiks-process.html">Process</a>
+      <a href="DataNiks-cases.html">Case Studies</a>
+      <a href="DataNiks-contact.html">Contact</a>
+    </nav>
+    <span class="footer-badge">Women-Owned Business</span>
+  </div>
+  <p class="footer-copy">© 2026 DataNiks LLC. All Rights Reserved.</p>
 </footer>
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script src="script.js"></script>
 </body>
 </html>
