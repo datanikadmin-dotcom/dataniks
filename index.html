@@ -4,68 +4,342 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Data Analytics Services USA | Dashboard creation, SQL & Python | DataNiks LLC</title>
-<meta name="description" content="Data analytics and business intelligence services for businesses. Power BI dashboards, SQL data solutions, and Python automation.">
-<meta name="keywords" content="data analytics services USA, Power BI dashboard developer, freelance data analyst, SQL data services, small business analytics">
+<meta name="description" content="DataNiks LLC — women-owned data analytics and business intelligence services for small businesses. Power BI dashboards, SQL data solutions, and Python automation.">
+<meta name="keywords" content="data analytics services USA, Power BI dashboard developer, freelance data analyst, SQL data services, small business analytics, women-owned business">
 <link rel="stylesheet" href="styles.css">
 <style>
-body.dark{--text-secondary:#b8bdd2;--text-primary:#f4f7fb}
-body.light{background:#f7f9fc;color:var(--text-primary)}
-body.light .hero{background:radial-gradient(1200px 500px at 50% 0%, rgba(109,94,252,.08), transparent 60%)}
-body.light .hero h1, body.light .section h2, body.light .about-panel h2, body.light .cta-panel h2{color:var(--text-primary)}
-body.light .hero p, body.light .section-subtitle, body.light .about-panel p, body.light .cta-panel p{color:var(--text-secondary)}
-body.light .service-card{background:linear-gradient(180deg,#ffffff,#f7f9ff);border:1px solid rgba(31,41,55,.08);box-shadow:0 18px 45px rgba(15,23,42,.08)}
-body.light .service-card h3{color:#111827}
-body.light .service-card p{color:#5c647a}
-body.light .service-tag{color:#7c869d}
-body.light .about-panel{background:linear-gradient(180deg,#ffffff,#f7f9ff);border:1px solid rgba(31,41,55,.08)}
-body.light .cta-panel{background:linear-gradient(135deg, rgba(109,94,252,.08), rgba(79,209,197,.08));border:1px solid rgba(31,41,55,.08)}
-body.light .btn-secondary{border:1px solid rgba(31,41,55,.14);color:#111827;background:#fff}
-body.light .nav-cta{color:var(--accent)!important}
-.hero{padding:130px 20px 90px}
-.hero h1{max-width:980px;margin:0 auto 18px;font-size:clamp(2.4rem,5vw,4.8rem);line-height:1.03;letter-spacing:-.04em}
-.hero p{max-width:780px;margin:0 auto 28px;font-size:1.15rem;line-height:1.8}
-.hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:10px}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 24px;border-radius:999px;font-weight:700;text-decoration:none;transition:transform .2s ease,filter .2s ease,border-color .2s ease}
-.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 16px 34px rgba(79,209,197,.12)}
-.btn-secondary{border:1px solid rgba(255,255,255,.16);color:#fff;background:rgba(255,255,255,.04)}
-.btn:hover{transform:translateY(-2px);filter:brightness(1.04)}
-.section{padding:92px 20px}
-.section-inner{max-width:1200px;margin:0 auto}
-.section h2{margin:0 0 14px;text-align:center;font-size:clamp(2rem,3.5vw,3.25rem);line-height:1.08}
-.section-subtitle{max-width:760px;margin:0 auto 44px;text-align:center;line-height:1.75;font-size:1.05rem}
-.services-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
-.service-card{position:relative;overflow:hidden;min-height:220px;padding:30px;border-radius:24px;background:linear-gradient(180deg, rgba(31,35,51,.98), rgba(18,21,35,.98));border:1px solid rgba(255,255,255,.09);box-shadow:0 24px 60px rgba(0,0,0,.24);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
-.service-card::before{content:'';position:absolute;inset:auto -40px -60px auto;width:170px;height:170px;background:radial-gradient(circle, rgba(109,94,252,.18), transparent 70%);pointer-events:none}
-.service-card:hover{transform:translateY(-8px);border-color:rgba(255,255,255,.16);box-shadow:0 30px 75px rgba(0,0,0,.38)}
-.service-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}
-.service-icon{width:46px;height:46px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-weight:800;box-shadow:0 10px 28px rgba(109,94,252,.28)}
-.service-tag{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#95a0c0}
-.service-card h3{margin:0 0 12px;font-size:1.22rem;line-height:1.25;color:var(--text-primary)}
-.service-card p{margin:0;color:var(--text-secondary);line-height:1.72;font-size:1rem;max-width:36ch}
-.about-panel,.cta-panel{max-width:980px;margin:0 auto;padding:34px;border-radius:28px}
-.about-panel{background:linear-gradient(180deg, rgba(31,35,51,.92), rgba(18,21,35,.92));border:1px solid rgba(255,255,255,.09);box-shadow:0 24px 60px rgba(0,0,0,.22)}
-.about-panel p{margin:0;text-align:center;font-size:1.05rem;line-height:1.8;color:var(--text-secondary)}
-.cta-panel{background:linear-gradient(135deg, rgba(109,94,252,.16), rgba(79,209,197,.12));border:1px solid rgba(255,255,255,.1);text-align:center}
-.cta-panel p{margin:0 0 22px;line-height:1.7;color:var(--text-secondary)}
-.nav-cta{color:var(--accent)!important;font-weight:800!important}
-@media (max-width:900px){.services-grid{grid-template-columns:1fr}.hero{padding-top:110px}}
-footer{
-    text-align:center;
-    padding:25px 20px;
-    font-size:0.95rem;
-    color:var(--text-secondary);
-    border-top:1px solid rgba(0,0,0,0.08);
-    margin-top:40px;
+/* Page-specific hero adjustments */
+.hero-text h1{text-align:left}
+.hero-text p{text-align:left}
+/* Service cards on homepage keep dark inner background */
+.service-card{background:var(--panel)}
+/* About section */
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;max-width:960px;margin:0 auto}
+.about-inner p{font-size:1.06rem;line-height:1.85;color:var(--text-secondary);margin-bottom:16px}
+.about-inner p:last-child{margin-bottom:0}
+.about-badges{display:flex;flex-direction:column;gap:14px}
+.about-badge-item{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:18px 20px;border-radius:14px;
+  background:var(--bg);border:1px solid var(--border);
 }
+.ab-icon{
+  width:40px;height:40px;border-radius:10px;
+  background:var(--navy);display:grid;place-items:center;
+  flex-shrink:0;
+}
+.ab-title{font-size:.93rem;font-weight:700;color:var(--text-primary);margin-bottom:3px}
+.ab-desc{font-size:.83rem;color:var(--text-secondary);line-height:1.5}
+@media(max-width:860px){.about-inner{grid-template-columns:1fr}}
 </style>
 </head>
 <body class="light">
-<nav><ul><li><a href="index.html">Home</a></li><li><a href="DataNiks-services.html">Services</a></li><li><a href="DataNiks-process.html">Process</a></li><li><a href="DataNiks-cases.html">Case Studies</a></li><li><a href="DataNiks-contact.html">Contact</a></li><li><a class="nav-cta" href="DataNiks-contact.html">Get Quote</a></li></ul></nav>
-<section class="hero"><div class="section-inner"><h1>Data Analytics &amp; Business Intelligence for Small Businesses</h1><p>We help businesses clean messy data, organize files and documents into structured datasets, automate reporting, and build powerful dashboards using Power BI, SQL, and Python.</p><div class="hero-actions"><a class="btn btn-primary" href="DataNiks-contact.html">Book Free Consultation</a><a class="btn btn-secondary" href="DataNiks-cases.html">View Case Studies</a></div></div></section>
-<section class="section"><div class="section-inner"><h2>How We Help</h2><p class="section-subtitle">Practical, productized data services that reduce manual work, improve reporting, and give you clearer business decisions.</p><div class="services-grid"><article class="service-card"><div class="service-top"><div class="service-icon">01</div><div class="service-tag">Foundation</div></div><h3>Data Cleaning &amp; Preparation</h3><p>Fix errors, remove duplicates, and structure messy datasets so your data becomes trustworthy and analysis-ready.</p></article><article class="service-card"><div class="service-top"><div class="service-icon">02</div><div class="service-tag">Structure</div></div><h3>Data Structuring</h3><p>Turn PDFs, forms, spreadsheets, and scattered business records into clean, structured data ready for reporting and analysis.</p></article><article class="service-card"><div class="service-top"><div class="service-icon">03</div><div class="service-tag">Insights</div></div><h3>Dashboard Development</h3><p>Interactive Power BI dashboards that turn your data into clear, actionable business insights.</p></article><article class="service-card"><div class="service-top"><div class="service-icon">04</div><div class="service-tag">Automation</div></div><h3>Automation with Python</h3><p>Automate repetitive reports and workflows to increase efficiency, reduce manual work, and improve accuracy.</p></article></div></div></section>
-<section class="section"><div class="section-inner"><h2>About DataNiks LLC</h2><div class="about-panel"><p>DataNiks LLC is a women-owned data consulting business focused on helping small and growing companies make better decisions using data. We specialize in Power BI, SQL, Excel, and Python-based solutions tailored to your business needs.</p></div></div></section>
-<section class="section"><div class="section-inner"><div class="cta-panel"><h2 style="margin-bottom:12px;">Ready to Turn Your Data Into Insights?</h2><p>Get a free consultation and discover how we can help your business.</p><a class="btn btn-primary" href="DataNiks-contact.html">Contact Us</a></div></div></section>
+
+<nav>
+  <ul>
+    <li class="nav-brand"><a href="index.html"><img src="logo.png" alt="DataNiks LLC" class="nav-logo"></a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="DataNiks-services.html">Services</a></li>
+    <li><a href="DataNiks-process.html">Process</a></li>
+    <li><a href="DataNiks-cases.html">Case Studies</a></li>
+    <li><a href="DataNiks-contact.html">Contact</a></li>
+    <li class="nav-spacer"></li>
+    <li><a class="nav-cta" href="DataNiks-contact.html">Get Quote</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="section-inner hero-grid">
+
+    <div class="hero-text">
+      <span class="trust-badge">Women-Owned Small Business</span>
+      <h1>Turn Messy Data Into<br><span class="hl">Business Growth</span></h1>
+      <p>DataNiks LLC helps small businesses clean data, build dashboards, and automate reports — so you spend less time fighting spreadsheets and more time growing.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="DataNiks-contact.html">Book Free Consultation</a>
+        <a class="btn btn-secondary" href="DataNiks-cases.html">View Case Studies</a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof-item">
+          <span class="proof-num">350+</span>
+          <span class="proof-label">Hours saved per<br>automation project</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-num">3 days → 2 hrs</span>
+          <span class="proof-label">Typical reporting<br>transformation</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-num">$13:1</span>
+          <span class="proof-label">ROI on analytics<br>investment</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <!-- Dashboard Illustration -->
+      <svg class="dash-svg" viewBox="0 0 520 390" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="areaG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#C9A44C" stop-opacity="0.22"/>
+            <stop offset="100%" stop-color="#C9A44C" stop-opacity="0"/>
+          </linearGradient>
+          <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="120%">
+            <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="#0D1B38" flood-opacity="0.14"/>
+          </filter>
+        </defs>
+
+        <!-- Main card -->
+        <rect x="8" y="8" width="504" height="374" rx="18" fill="white" filter="url(#cardShadow)"/>
+
+        <!-- Header bar -->
+        <rect x="8" y="8" width="504" height="52" rx="18" fill="#1C3469"/>
+        <rect x="8" y="40" width="504" height="20" fill="#1C3469"/>
+
+        <!-- Window dots -->
+        <circle cx="32" cy="34" r="5" fill="rgba(255,255,255,.2)"/>
+        <circle cx="48" cy="34" r="5" fill="rgba(255,255,255,.2)"/>
+        <circle cx="64" cy="34" r="5" fill="#C9A44C"/>
+
+        <!-- Header title -->
+        <text x="88" y="39" fill="rgba(255,255,255,.9)" font-size="12" font-family="Inter,Arial,sans-serif" font-weight="700">DataNiks — Sales Dashboard</text>
+        <!-- Live badge -->
+        <rect x="412" y="26" width="42" height="16" rx="8" fill="rgba(201,164,76,.22)"/>
+        <circle cx="421" cy="34" r="3" fill="#C9A44C"/>
+        <text x="427" y="38" fill="#C9A44C" font-size="9" font-family="Arial,sans-serif" font-weight="700">LIVE</text>
+
+        <!-- Left sidebar -->
+        <rect x="8" y="60" width="72" height="322" fill="#F4F7FB" rx="0"/>
+        <rect x="76" y="60" width="1" height="322" fill="rgba(28,52,105,.08)"/>
+        <!-- Sidebar nav items -->
+        <rect x="18" y="75" width="52" height="28" rx="8" fill="#1C3469"/>
+        <text x="26" y="93" fill="white" font-size="9" font-family="Arial,sans-serif" font-weight="600">Sales</text>
+        <text x="26" y="120" fill="#4D5B7C" font-size="9" font-family="Arial,sans-serif">Reports</text>
+        <text x="26" y="143" fill="#4D5B7C" font-size="9" font-family="Arial,sans-serif">Products</text>
+        <text x="26" y="166" fill="#4D5B7C" font-size="9" font-family="Arial,sans-serif">Clients</text>
+        <text x="26" y="189" fill="#4D5B7C" font-size="9" font-family="Arial,sans-serif">Settings</text>
+
+        <!-- ── KPI CARDS ROW ── -->
+        <!-- KPI 1: Revenue -->
+        <rect x="88" y="72" width="128" height="74" rx="12" fill="#F4F7FB"/>
+        <text x="100" y="93" fill="#4D5B7C" font-size="9" font-family="Arial,sans-serif">Total Revenue</text>
+        <text x="100" y="116" fill="#1C3469" font-size="20" font-family="Inter,Arial,sans-serif" font-weight="800">$84.2K</text>
+        <rect x="100" y="124" width="36" height="14" rx="6" fill="rgba(34,197,94,.12)"/>
+        <text x="105" y="134" fill="#16A34A" font-size="8" font-family="Arial,sans-serif" font-weight="700">↑ 12.4%</text>
+
+        <!-- KPI 2: Orders -->
+        <rect x="228" y="72" width="128" height="74" rx="12" fill="#F4F7FB"/>
+        <text x="240" y="93" fill="#4D5B7C" font-size="9" font-family="Arial,sans-serif">Total Orders</text>
+        <text x="240" y="116" fill="#1C3469" font-size="20" font-family="Inter,Arial,sans-serif" font-weight="800">1,284</text>
+        <rect x="240" y="124" width="30" height="14" rx="6" fill="rgba(34,197,94,.12)"/>
+        <text x="244" y="134" fill="#16A34A" font-size="8" font-family="Arial,sans-serif" font-weight="700">↑ 8.1%</text>
+
+        <!-- KPI 3: Avg Order (highlighted in navy) -->
+        <rect x="368" y="72" width="132" height="74" rx="12" fill="#1C3469"/>
+        <text x="380" y="93" fill="rgba(255,255,255,.65)" font-size="9" font-family="Arial,sans-serif">Avg. Order Value</text>
+        <text x="380" y="116" fill="#C9A44C" font-size="20" font-family="Inter,Arial,sans-serif" font-weight="800">$65.60</text>
+        <rect x="380" y="124" width="30" height="14" rx="6" fill="rgba(201,164,76,.2)"/>
+        <text x="385" y="134" fill="#C9A44C" font-size="8" font-family="Arial,sans-serif" font-weight="700">↑ 3.9%</text>
+
+        <!-- ── BAR CHART ── -->
+        <rect x="88" y="160" width="200" height="196" rx="12" fill="#F4F7FB"/>
+        <text x="100" y="180" fill="#0D1B38" font-size="10" font-family="Inter,Arial,sans-serif" font-weight="700">Monthly Sales</text>
+
+        <!-- Grid lines -->
+        <line x1="100" y1="330" x2="276" y2="330" stroke="#D4DCE8" stroke-width="1"/>
+        <line x1="100" y1="305" x2="276" y2="305" stroke="#D4DCE8" stroke-width="0.5" stroke-dasharray="4,3"/>
+        <line x1="100" y1="280" x2="276" y2="280" stroke="#D4DCE8" stroke-width="0.5" stroke-dasharray="4,3"/>
+        <line x1="100" y1="255" x2="276" y2="255" stroke="#D4DCE8" stroke-width="0.5" stroke-dasharray="4,3"/>
+        <line x1="100" y1="230" x2="276" y2="230" stroke="#D4DCE8" stroke-width="0.5" stroke-dasharray="4,3"/>
+
+        <!-- Bars Jan–Jun -->
+        <rect x="106" y="274" width="20" height="56" rx="5" fill="#D4DCE8"/>
+        <text x="109" y="343" fill="#4D5B7C" font-size="7" font-family="Arial">Jan</text>
+        <rect x="132" y="258" width="20" height="72" rx="5" fill="#D4DCE8"/>
+        <text x="135" y="343" fill="#4D5B7C" font-size="7" font-family="Arial">Feb</text>
+        <rect x="158" y="248" width="20" height="82" rx="5" fill="#1C3469"/>
+        <text x="161" y="343" fill="#4D5B7C" font-size="7" font-family="Arial">Mar</text>
+        <rect x="184" y="265" width="20" height="65" rx="5" fill="#D4DCE8"/>
+        <text x="187" y="343" fill="#4D5B7C" font-size="7" font-family="Arial">Apr</text>
+        <rect x="210" y="238" width="20" height="92" rx="5" fill="#C9A44C"/>
+        <text x="213" y="343" fill="#4D5B7C" font-size="7" font-family="Arial">May</text>
+        <rect x="236" y="222" width="20" height="108" rx="5" fill="#1C3469"/>
+        <text x="239" y="343" fill="#4D5B7C" font-size="7" font-family="Arial">Jun</text>
+
+        <!-- ── LINE CHART ── -->
+        <rect x="300" y="160" width="200" height="196" rx="12" fill="#1C3469"/>
+        <text x="312" y="180" fill="rgba(255,255,255,.85)" font-size="10" font-family="Inter,Arial,sans-serif" font-weight="700">Revenue Trend</text>
+
+        <!-- Grid lines dark -->
+        <line x1="312" y1="330" x2="488" y2="330" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+        <line x1="312" y1="300" x2="488" y2="300" stroke="rgba(255,255,255,.07)" stroke-width="0.5" stroke-dasharray="4,3"/>
+        <line x1="312" y1="270" x2="488" y2="270" stroke="rgba(255,255,255,.07)" stroke-width="0.5" stroke-dasharray="4,3"/>
+        <line x1="312" y1="240" x2="488" y2="240" stroke="rgba(255,255,255,.07)" stroke-width="0.5" stroke-dasharray="4,3"/>
+
+        <!-- Area fill -->
+        <polygon points="312,330 332,316 354,320 376,304 398,292 420,278 442,264 464,250 486,234 486,330" fill="url(#areaG)"/>
+        <!-- Line -->
+        <polyline points="312,316 332,316 354,320 376,304 398,292 420,278 442,264 464,250 486,234"
+                  fill="none" stroke="#C9A44C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Dots -->
+        <circle cx="312" cy="316" r="3" fill="#C9A44C"/>
+        <circle cx="354" cy="320" r="3" fill="#C9A44C"/>
+        <circle cx="398" cy="292" r="3" fill="#C9A44C"/>
+        <circle cx="442" cy="264" r="3" fill="#C9A44C"/>
+        <!-- Last dot highlighted -->
+        <circle cx="486" cy="234" r="5" fill="#C9A44C" stroke="white" stroke-width="2"/>
+        <!-- Tooltip -->
+        <rect x="462" y="218" width="44" height="18" rx="6" fill="#C9A44C"/>
+        <text x="469" y="230" fill="white" font-size="9" font-family="Arial,sans-serif" font-weight="800">+22.4%</text>
+
+        <!-- Month labels line chart -->
+        <text x="326" y="343" fill="rgba(255,255,255,.4)" font-size="7" font-family="Arial">Jan</text>
+        <text x="370" y="343" fill="rgba(255,255,255,.4)" font-size="7" font-family="Arial">Mar</text>
+        <text x="414" y="343" fill="rgba(255,255,255,.4)" font-size="7" font-family="Arial">May</text>
+        <text x="458" y="343" fill="rgba(255,255,255,.4)" font-size="7" font-family="Arial">Jun</text>
+
+        <!-- Bottom border radius fix -->
+        <rect x="8" y="362" width="504" height="20" rx="0" fill="white"/>
+        <rect x="8" y="356" width="504" height="26" rx="0" fill="white"/>
+        <rect x="8" y="364" width="504" height="18" rx="18" fill="white"/>
+      </svg>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── STATS STRIP ── -->
+<section class="stats-strip">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-number">240</div>
+      <div class="stat-label">hours lost per employee each year to manual data entry</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">94%</div>
+      <div class="stat-label">of business spreadsheets contain at least one error</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">5×</div>
+      <div class="stat-label">faster decisions made by data-driven companies</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">$13</div>
+      <div class="stat-label">returned for every $1 invested in data analytics</div>
+    </div>
+  </div>
+  <p class="stats-sources">Sources: IBM / Secoda · PwC Global Data &amp; Analytics Survey · Fanruan Analytics Report 2025 · Grand View Research</p>
+</section>
+
+<!-- ── HOW WE HELP ── -->
+<section class="section" style="background:var(--bg)">
+  <div class="section-inner">
+    <h2>How We Help</h2>
+    <p class="section-subtitle">Practical, productized data services that reduce manual work, improve reporting, and give you clearer business decisions.</p>
+    <div class="services-grid">
+
+      <article class="service-card">
+        <div class="service-top">
+          <div class="service-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M3 3h18v4H3V3zm0 6h8v12H3V9zm10 0h8v6h-8V9zm0 8h8v4h-8v-4z" fill="#C9A44C"/></svg>
+          </div>
+          <span class="service-tag">Foundation</span>
+        </div>
+        <h3>Data Cleaning &amp; Preparation</h3>
+        <p>Fix errors, remove duplicates, and structure messy datasets so your data becomes trustworthy and analysis-ready.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-top">
+          <div class="service-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm6 0h4v4h-4V4zM4 10h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4z" fill="#C9A44C"/></svg>
+          </div>
+          <span class="service-tag">Structure</span>
+        </div>
+        <h3>Data Structuring</h3>
+        <p>Turn PDFs, forms, spreadsheets, and scattered business records into clean, structured data ready for reporting and analysis.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-top">
+          <div class="service-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><rect x="3" y="14" width="4" height="7" rx="1" fill="#C9A44C"/><rect x="9" y="10" width="4" height="11" rx="1" fill="#C9A44C"/><rect x="15" y="6" width="4" height="15" rx="1" fill="#C9A44C"/><path d="M3 6l5-3 4 4 5-4 4 2" stroke="#C9A44C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="service-tag">Insights</span>
+        </div>
+        <h3>Dashboard Development</h3>
+        <p>Interactive Power BI dashboards that turn your data into clear, actionable business insights your whole team can use.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-top">
+          <div class="service-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z" stroke="#C9A44C" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="#C9A44C" stroke-width="1.5" stroke-linecap="round"/><path d="M8 14l2 2 4-4" stroke="#C9A44C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="service-tag">Automation</span>
+        </div>
+        <h3>Automation with Python</h3>
+        <p>Automate repetitive reports and data workflows so your team stops doing manual work and starts focusing on what matters.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section class="section" style="background:var(--bg-soft)">
+  <div class="section-inner">
+    <h2>About DataNiks LLC</h2>
+    <p class="section-subtitle" style="margin-bottom:40px">A women-owned data consulting business built for small businesses across the USA.</p>
+    <div class="about-inner">
+      <div>
+        <p>DataNiks LLC was founded with one belief: small businesses deserve the same quality data insights as large enterprises — without the enterprise cost or complexity.</p>
+        <p>We specialize in Power BI, SQL, Excel, and Python-based solutions tailored to your specific business needs. Whether you're a 5-person team or a 50-person operation, we help you make smarter decisions faster.</p>
+        <p style="margin-top:20px"><a class="btn btn-primary" href="DataNiks-contact.html">Start a Conversation</a></p>
+      </div>
+      <div class="about-badges">
+        <div class="about-badge-item">
+          <div class="ab-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M12 2L3 7l9 5 9-5-9-5zM3 12l9 5 9-5M3 17l9 5 9-5" stroke="#C9A44C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div><div class="ab-title">Power BI &amp; Excel Dashboards</div><div class="ab-desc">Interactive reports your team can actually use daily</div></div>
+        </div>
+        <div class="about-badge-item">
+          <div class="ab-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M4 4h16v4H4V4zm0 8h10v8H4v-8zm12 0h4v4h-4v-4zm0 6h4v2h-4v-2z" fill="#C9A44C"/></svg></div>
+          <div><div class="ab-title">SQL &amp; Python Solutions</div><div class="ab-desc">Clean, efficient code built for your business data</div></div>
+        </div>
+        <div class="about-badge-item">
+          <div class="ab-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke="#C9A44C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="#C9A44C" stroke-width="1.8"/></svg></div>
+          <div><div class="ab-title">Women-Owned &amp; US-Based</div><div class="ab-desc">Clear communication, reliable delivery, no outsourcing</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="section" style="background:var(--bg)">
+  <div class="section-inner">
+    <div class="cta-panel">
+      <h2>Ready to Turn Your Data Into Insights?</h2>
+      <p>Get a free 30-minute consultation and discover exactly how we can help your business.</p>
+      <a class="btn btn-gold" href="DataNiks-contact.html">Book Free Consultation</a>
+    </div>
+  </div>
+</section>
+
 <footer>
-    © 2026 DataNiks LLC. All Rights Reserved.
+  <div class="footer-inner">
+    <img src="logo.png" alt="DataNiks LLC" class="footer-logo">
+    <nav class="footer-links">
+      <a href="DataNiks-services.html">Services</a>
+      <a href="DataNiks-process.html">Process</a>
+      <a href="DataNiks-cases.html">Case Studies</a>
+      <a href="DataNiks-contact.html">Contact</a>
+    </nav>
+    <span class="footer-badge">Women-Owned Business</span>
+  </div>
+  <p class="footer-copy">© 2026 DataNiks LLC. All Rights Reserved. &nbsp;·&nbsp; DATA · INSIGHT · IMPACT</p>
 </footer>
-  <script src="script.js"></script></body></html>
+
+<script src="script.js"></script>
+</body>
+</html>
