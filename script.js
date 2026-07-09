@@ -1,3 +1,22 @@
+// Mobile nav toggle (hamburger menu)
+document.querySelectorAll('.nav-toggle').forEach(btn => {
+  const menu = btn.closest('ul');
+  if (!menu) return;
+  btn.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('nav-open');
+    btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', String(isOpen));
+  });
+  // close the menu after tapping a link
+  menu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      menu.classList.remove('nav-open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+});
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', e => {
