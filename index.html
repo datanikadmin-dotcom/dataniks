@@ -52,6 +52,24 @@
 .hero-text p{text-align:left}
 /* Service cards on homepage keep dark inner background */
 .service-card{background:var(--panel)}
+/* Data check promo banner */
+.promo-banner{
+  background:linear-gradient(90deg,var(--navy),var(--navy-dark));
+  padding:18px 20px;
+}
+.promo-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;justify-content:center;gap:16px;
+  flex-wrap:wrap;text-align:center;
+}
+.promo-inner p{color:#fff;font-weight:600;font-size:.98rem;margin:0}
+.promo-inner strong{color:var(--gold)}
+.promo-inner a{
+  background:var(--gold);color:var(--navy);font-weight:800;
+  padding:9px 20px;border-radius:9px;font-size:.9rem;
+  white-space:nowrap;transition:background .15s,transform .15s;
+}
+.promo-inner a:hover{background:var(--gold-light);transform:translateY(-1px)}
 /* About section */
 .about-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;max-width:960px;margin:0 auto}
 .about-inner p{font-size:1.06rem;line-height:1.85;color:var(--text-secondary);margin-bottom:16px}
@@ -82,6 +100,7 @@
     <li><a href="DataNiks-services.html">Services</a></li>
     <li><a href="DataNiks-process.html">Process</a></li>
     <li><a href="DataNiks-cases.html">Case Studies</a></li>
+    <li><a href="DataNiks-data-check.html">Free Data Check</a></li>
     <li><a href="DataNiks-contact.html">Contact</a></li>
     <li class="nav-spacer"></li>
     <li><a class="nav-cta" href="DataNiks-contact.html">Get Quote</a></li>
@@ -245,6 +264,14 @@
       </svg>
     </div>
 
+  </div>
+</section>
+
+<!-- ── FREE DATA CHECK PROMO ── -->
+<section class="promo-banner">
+  <div class="promo-inner">
+    <p>🔍 <strong>60% of AI projects fail</strong> because of bad data — is yours ready?</p>
+    <a href="DataNiks-data-check.html">Take the Free 2-Minute Check →</a>
   </div>
 </section>
 
