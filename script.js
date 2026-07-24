@@ -26,19 +26,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Scroll-in animation for cards
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, { threshold: 0.08 });
+// Scroll-in animation for cards.
+// Content is visible by default (see styles.css) — we only opt into the
+// hidden/reveal state here, and only when IntersectionObserver exists and
+// the user hasn't asked for reduced motion. If this script fails to load
+// or errors out, cards simply stay visible instead of being stuck hidden.
+const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-document.querySelectorAll('.glass-card, .service-card, .case-card, .process-card, .package-card').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  observer.observe(el);
-});
+if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+  document.documentElement.classList.add('js-reveal-ready');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.glass-card, .service-card, .case-card, .process-card, .package-card').forEach(el => {
+    observer.observe(el);
+  });
+}
